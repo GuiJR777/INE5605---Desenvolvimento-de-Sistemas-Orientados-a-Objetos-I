@@ -15,7 +15,9 @@ class TestOrdenacao:
         # Assert
         assert result == expected_result
 
-    def test_when_given_a_list_with_one_element_should_return_the_same_list(self):
+    def test_when_given_a_list_with_one_element_should_return_the_same_list(
+        self,
+    ):
         # Arrange
         list_to_order = [1]
         expected_result = "1"
@@ -26,7 +28,9 @@ class TestOrdenacao:
         # Assert
         assert result == expected_result
 
-    def test_when_given_a_ordered_list_should_return_the_same_ordered_list(self):
+    def test_when_given_a_ordered_list_should_return_the_same_ordered_list(
+        self,
+    ):
         # Arrange
         list_to_order = [1, 2, 3, 4, 5]
         expected_result = "1,2,3,4,5"
@@ -48,7 +52,9 @@ class TestOrdenacao:
         # Assert
         assert result == expected_result
 
-    def test_when_given_a_inverted_ordered_list_should_return_a_ordered_list(self):
+    def test_when_given_a_inverted_ordered_list_should_return_a_ordered_list(
+        self,
+    ):
         # Arrange
         list_to_order = [5, 4, 3, 2, 1]
         expected_result = "1,2,3,4,5"
@@ -59,7 +65,9 @@ class TestOrdenacao:
         # Assert
         assert result == expected_result
 
-    def test_when_given_a_list_with_repeated_elements_should_return_a_ordered_list_without_repeated_elements(self):
+    def test_when_given_a_list_with_repeated_elements_should_return_a_ordered_list_without_repeated_elements(
+        self,
+    ):
         # Arrange
         list_to_order = [5, 4, 3, 2, 1, 1, 2, 3, 4, 5]
         expected_result = "1,1,2,2,3,3,4,4,5,5"

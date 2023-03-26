@@ -6,9 +6,15 @@
 """
 
 
-
 class CalculaCarta:
-    def __init__(self, money_available, envelope_price, stamp_price, stamps_in_storage, envelope_in_storage) -> None:
+    def __init__(
+        self,
+        money_available,
+        envelope_price,
+        stamp_price,
+        stamps_in_storage,
+        envelope_in_storage,
+    ) -> None:
         self.__money_available = money_available
         self.__envelope_price = envelope_price
         self.__stamp_price = stamp_price
@@ -18,7 +24,9 @@ class CalculaCarta:
         self.__finished_letters = 0
 
     def letters_that_can_be_sent(self) -> int:
-        self.__finished_letters += self.__letters_that_can_be_sent_without_buying_anything()
+        self.__finished_letters += (
+            self.__letters_that_can_be_sent_without_buying_anything()
+        )
         self.__makes_stock_quantities_equal()
         self.__fills_stock_quantities()
         self.__makes_letters()
@@ -36,7 +44,6 @@ class CalculaCarta:
         elif self.__envelope_in_storage >= self.__stamps_in_storage:
             letters = self.__stamps_in_storage
 
-
         self.__stamps_in_storage -= letters
         self.__envelope_in_storage -= letters
 
@@ -47,11 +54,15 @@ class CalculaCarta:
             return
 
         if self.__envelope_in_storage > self.__stamps_in_storage:
-            for _ in range(self.__envelope_in_storage - self.__stamps_in_storage):
+            for _ in range(
+                self.__envelope_in_storage - self.__stamps_in_storage
+            ):
                 self.__buy_stamps(1)
 
         elif self.__stamps_in_storage > self.__envelope_in_storage:
-            for _ in range(self.__stamps_in_storage - self.__envelope_in_storage):
+            for _ in range(
+                self.__stamps_in_storage - self.__envelope_in_storage
+            ):
                 self.__buy_envelopes(1)
 
     def __buy_envelopes(self, quantity: int) -> None:
@@ -78,7 +89,6 @@ class CalculaCarta:
             self.__finished_letters += 1
             self.__envelope_in_storage -= 1
             self.__stamps_in_storage -= 1
-
 
 
 RS = float(input())
