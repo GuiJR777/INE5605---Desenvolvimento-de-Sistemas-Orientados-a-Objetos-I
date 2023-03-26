@@ -1,5 +1,7 @@
 class PacoteViagem:
-    def __init__(self, origem: str, destino: str, duracao: int, custo_unitario: int) -> None:
+    def __init__(
+        self, origem: str, destino: str, duracao: int, custo_unitario: int
+    ) -> None:
         if isinstance(origem, str):
             self.__origem = origem
         else:

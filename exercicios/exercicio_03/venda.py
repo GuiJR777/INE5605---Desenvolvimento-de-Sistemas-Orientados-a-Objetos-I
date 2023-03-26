@@ -3,7 +3,14 @@ from pacote_viagem import PacoteViagem
 
 
 class Venda:
-    def __init__(self, codigo: int, cliente: Cliente, descricao: str, pacote: PacoteViagem, quantidade: int) -> None:
+    def __init__(
+        self,
+        codigo: int,
+        cliente: Cliente,
+        descricao: str,
+        pacote: PacoteViagem,
+        quantidade: int,
+    ) -> None:
         if isinstance(codigo, int):
             self.__codigo = codigo
         else:
@@ -20,7 +27,7 @@ class Venda:
             raise TypeError("descricao precisa ser uma string")
 
         if isinstance(pacote, PacoteViagem):
-            self.__pacote = PacoteViagem
+            self.__pacote = pacote
         else:
             raise TypeError("pacote precisa ser da classe Cliente")
 
@@ -85,4 +92,4 @@ class Venda:
             raise TypeError("quantidade deve ser inteiro")
 
     def preco_total(self) -> float:
-        return self.__pacote.custo_unitario * self.__quantidade
+        return self.pacote.custo_unitario * self.quantidade
