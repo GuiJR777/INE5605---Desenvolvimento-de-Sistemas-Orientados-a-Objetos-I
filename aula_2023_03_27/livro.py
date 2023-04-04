@@ -2,7 +2,13 @@ from pagina import Pagina
 
 
 class Livro:
-    def __init__(self, titulo: str, resumo: str, texto_primeira_pagina: str, numero: int = 1) -> None:
+    def __init__(
+        self,
+        titulo: str,
+        resumo: str,
+        texto_primeira_pagina: str,
+        numero: int = 1,
+    ) -> None:
         self.titulo = titulo
         self.resumo = resumo
         self.paginas = [

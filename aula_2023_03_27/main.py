@@ -19,7 +19,6 @@
 # harry_potter_1.add_pagina(2, 'Harry Potter é o menino sobrevivente de Lord Voldemort')
 
 
-
 # Exemplo de uso de classes em uma Herança
 
 from aluno import Aluno
