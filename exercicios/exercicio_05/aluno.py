@@ -23,16 +23,12 @@ class Aluno(UsuarioBU, ABC):
 
     @abstractmethod
     def emprestar(self, titulo_livro: str) -> str:
-        mensagem = MENSAGEM_DE_ACRESSIMO.format(
-            matricula=self.matricula
-        )
+        mensagem = MENSAGEM_DE_ACRESSIMO.format(matricula=self.matricula)
 
         return f"{mensagem} {super().emprestar(titulo_livro)}"
 
     @abstractmethod
     def devolver(self, titulo_livro: str) -> str:
-        mensagem = MENSAGEM_DE_ACRESSIMO.format(
-            matricula=self.matricula
-        )
+        mensagem = MENSAGEM_DE_ACRESSIMO.format(matricula=self.matricula)
 
         return f"{mensagem} {super().devolver(titulo_livro)}"
